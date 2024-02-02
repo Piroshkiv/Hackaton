@@ -1,0 +1,308 @@
+/* Color pallet vars */
+:root{
+    /* container color */
+    --color-background-container-main-weatherApp:#D69E36;
+    --color-background-container-additional-weatherApp:#DEAB4D;
+    --color-background-container-additional-2-weatherApp:#d19e409f;
+    /* ----------------------------------------- */
+    /* font color */
+    --color-text-main-weatherApp:#eee;
+
+    /* ----------------------------------------- */
+    /* button color */
+    --color-background-button-main-weatherApp:#DEAB4D;
+    --color-background-button-additional-weatherApp:#c59742;
+    --color-border-button-main-weatherApp:#b98626;
+}
+
+/* Size vars */
+:root{
+    /* fonts size (16px start)*/
+    --size-text-main-small-weatherApp:1em;
+    --size-text-main-medium-weatherApp:1.2em;
+    --size-text-main-extra_medium-weatherApp:2.4em;
+    --size-text-main-big-weatherApp:2.6em;
+    /* ----------------------------------------- */
+
+    /* images size */
+    /* medium */
+    --size-height-image-main-medium-weatherApp:200px;
+    --size-weight-image-main-medium-weatherApp:200px;
+    /* big */
+    --size-height-image-main-big-weatherApp:320px;
+    --size-weight-image-main-big-weatherApp:320px;
+
+    /* ----------------------------------------- */
+
+    /* container size */
+    /* small */
+    --size-height-container-main-small-weatherApp:200px;
+    --size-weight-container-main-small-weatherApp:200px;
+    /* extra_small */
+    --size-height-container-main-extra_small-weatherApp:180px;
+    --size-weight-container-main-extra_small-weatherApp:180px;
+    /* medium */
+    --size-weight-container-main-medium-weatherApp:320px;
+    /* extra_medium */
+    --size-height-container-main-extra_medium-weatherApp:350px;
+    /* big */
+    --size-height-container-main-big-weatherApp:540px;
+    /* extra_big */
+    --size-weight-container-main-extra_big-weatherApp:85%;
+    /* full */
+    --size-height-container-main-full-weatherApp:100%;
+    --size-weight-container-main-full-weatherApp:100%;
+
+    /* ----------------------------------------- */
+
+    /* button size */
+    /* small */
+    --size-height-button-main-small-weatherApp:50px;
+    --size-weight-button-main-small-weatherApp:50px;
+    /* full */
+    --size-height-button-main-full-weatherApp:100%;
+    --size-weight-button-main-full-weatherApp:100%;
+}
+/* marging/padding/gap/radius vars */
+:root{
+    /* marging */
+    
+    /* padding */ 
+    --padding-medium-width-weatherApp:0 5px 0 5px;
+    --padding-medium-width-weatherApp:0 25px 0 25px;
+    --padding-small-width-left-weatherApp:0 0 0 10px;
+    /* gap */
+    --gap-tiny-weatherApp:5px;
+    --gap-small-weatherApp:15px;
+    /* radius */
+    --border_radius-small:15px;
+    --border_radius-medium:25px;
+}
+/* --------- MAIN PARAMS --------- */
+.page_container {
+    width: var(--size-weight-container-main-full-weatherApp);
+    height: var(--size-height-container-main-full-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-background-container-main-weatherApp);
+    gap: var(--gap-small-weatherApp);
+}
+
+/* --------- TOP CONTAINER PARAMS --------- */
+.top_info_container {
+    color: var(--color-text-main-weatherApp);
+    font-size: var(--size-text-main-medium-weatherApp);
+    width: var(--size-weight-container-main-extra_big-weatherApp);
+    min-height: var(--size-height-container-main-extra_medium-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-medium-width-weatherApp);
+
+}
+/* TOP CONTAINER PARAMS(LEFT) */
+.inner_info_container {
+    height: var(--size-height-container-main-full-weatherApp);
+    min-width: var(--size-weight-container-main-small-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.top_inner_info_container, .bottom_inner_info_container {
+    width: var(--size-weight-container-main-full-weatherApp);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:var(--gap-small-weatherApp);
+}
+
+.select_location_button {
+    height: var(--size-height-button-main-small-weatherApp);
+    width: var(--size-weight-button-main-full-weatherApp);
+    outline: none;
+    background: var(--color-background-button-main-weatherApp);
+    border:transparent;
+    border-bottom: 0.25em solid var(--color-background-button-additional-weatherApp);
+    border-radius: var(--border_radius-small);
+    color: var(--color-text-main-weatherApp);
+    font-size: var(--size-text-main-medium-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-small-weatherApp);
+    cursor: pointer;
+    box-shadow: 0 2px 3px var(--color-background-container-main-weatherApp);
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    position: relative;
+}
+.select_location_button:hover {
+    border-bottom-width: 0;
+    top:5px;
+}
+
+/* TOP CONTAINER PARAMS(RIGHT) */
+.info_big_weather_image {
+    width: var(--size-weight-image-main-big-weatherApp);
+    height: var(--size-height-image-main-big-weatherApp);
+    
+}
+
+/* --------- BOTTOM CONTAINER PARAMS --------- */
+.bottom_info_container {
+    color: var(--color-text-main-weatherApp);
+    font-size: var(--size-text-main-medium-weatherApp);
+    width: var(--size-weight-container-main-extra_big-weatherApp);
+    min-height: var(--size-height-container-main-big-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-small-full-weatherApp);
+    gap: var(--gap-small-weatherApp);
+}
+
+.info_day_container, .graph_day_container, .weather_day_info_container  {
+    background: var(--color-background-container-additional-weatherApp);
+    border-radius: var(--border_radius-medium);
+    border-bottom: 0.25em solid var(--color-background-button-additional-weatherApp);
+    box-shadow: 0 2px 3px var(--color-background-container-main-weatherApp);
+}
+/* WEATHER INFO CONTAINER (RIGHT)*/
+.weather_day_info_container{
+    width: var(--size-weight-container-main-medium-weatherApp);
+    height: var(--size-height-container-main-full-weatherApp);   
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    flex-direction: column;
+    gap:var(--gap-small-weatherApp);
+}
+
+.all_info_container {
+    width: var(--size-weight-container-main-full-weatherApp);
+    height: var(--size-height-container-main-full-weatherApp);   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:var(--gap-small-weatherApp);
+}
+
+.info_box {
+    width: var(--size-weight-container-main-extra_big-weatherApp);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-tiny-weatherApp);
+    padding: var(--padding-small-width-left-weatherApp);
+    background-color: var(--color-background-container-additional-2-weatherApp); 
+    border-bottom: 2px solid var(--color-border-button-main-weatherApp);
+    border-radius: var(--border_radius-small);
+    padding:var(--padding-small-width-weatherApp);
+}
+
+.image_info_box{
+    width: 35px;
+    height: 35px;
+}
+
+.text_info_box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+/* GRAPH AND DAY PICKER CONTAINERS */
+.graph_day_container, .info_day_container {
+    width: var(--size-weight-container-main-full-weatherApp);
+}
+.info_day_container {
+    height: var(--size-height-container-main-extra_small-weatherApp);
+}
+.graph_day_container {
+    height: var(--size-height-container-main-extra_medium-weatherApp);
+}
+
+
+.graph_day_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graph_day_weather,.graph_day_weather_tooltip  {
+    border-radius: var(--border_radius-small);
+}
+
+.run-popup-animation {
+    animation: 1s ease-out 0s 1 popUp;
+}
+.run-slideright-animation {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+.run-sliderleft-animation {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+.run-sliderbottom-animation {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+/* --------- EXTRA --------- */
+/* TEXT PARAMS */
+.small_standart_text,.medium_standart_text,.extra_medium_standart_text,.big_standart_text {
+    color:var(--color-text-main-weatherApp)
+}
+.small_standart_text {
+    font-size: var(--size-text-main-small-weatherApp);
+}
+.medium_standart_text {
+    font-size: var(--size-text-main-medium-weatherApp);
+}
+.extra_medium_standart_text {
+    font-size: var(--size-text-main-extra_medium-weatherApp);
+}
+.big_standart_text {
+    font-size: var(--size-text-main-big-weatherApp);
+}
+
+/* ANIMATIONS PARAMS */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+    0% {
+      transform: scale(0%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
