@@ -1,0 +1,6 @@
+from .WeatherData import WeatherData
+from .WeatherOneDayRequest import WeatherOneDayRequest
+from .WeatherOneDayResponse import WeatherOneDayResponse
+from .WeatherSeveralDaysRequest import WeatherSeveralDaysRequest
+from .WeatherSeveralDaysResponse import WeatherSeveralDaysResponse
+from .WeatherForecastRequest import WeatherForecastRequest

@@ -1,0 +1,2 @@
+from .HistoryWeatherRouter import history_router
+from .ForecastWeatherRouter import forecast_router

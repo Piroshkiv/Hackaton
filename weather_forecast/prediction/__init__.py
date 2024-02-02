@@ -1,0 +1,1 @@
+from .PredictionWeather import WeatherPrediction
